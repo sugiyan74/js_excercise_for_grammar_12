@@ -57,8 +57,8 @@ tweets.forEach((tweet, index) => {
     console.log(index + '番目のusername\n', tweet.username);
     console.log(index + '番目のtext\n', tweet.text);
     console.log(index + '番目のリツイート\n');
-    tweet.replies.forEach((replie, index) => {
-        console.log('username=>', replie.username);
-        console.log('text=>',replie.text);
+    tweet.replies.forEach((reply, index) => {
+        console.log('username=>', reply.username);
+        console.log('text=>',reply.text);
     });
 });
