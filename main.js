@@ -14,7 +14,36 @@
  *         - username : 返信ツイートしたユーザー名(文字列。ユーザー名は自由につけて良い)
  *         - text : ツイート内容(文字列。ツイート内容は自由に作って良い。)
  */
-
+const tweets = [
+    {
+        username: 'sugiyan1',
+        text: 'hello1',
+        replies: [
+            {
+                username: 'kenta1-1',
+                text: 'retweet1-1'
+            },
+            {
+                username: 'kenta1-2',
+                text: 'retweet1-2'
+            }
+        ]
+    },
+    {
+        username: 'sugiyan2',
+        text: 'hello2',
+        replies: [
+            {
+                username: 'kenta2-1',
+                text: 'retweet2-1'
+            },
+            {
+                username: 'kenta2-2',
+                text: 'retweet2-2'
+            }
+        ]
+    }
+];
 
 /**
  * 課題2: 課題1で作ったtweetsの内容を全て表示する
@@ -24,3 +53,12 @@
  *     - replies
  *       - repliesの内容もforEachを使って全て表示する
  */
+tweets.forEach((tweet, index) => {
+    console.log(index + '番目のusername\n', tweet.username);
+    console.log(index + '番目のtext\n', tweet.text);
+    console.log(index + '番目のリツイート\n');
+    tweet.replies.forEach((reply, index) => {
+        console.log('username=>', reply.username);
+        console.log('text=>',reply.text);
+    });
+});
